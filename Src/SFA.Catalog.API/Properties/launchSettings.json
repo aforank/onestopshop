@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "SFA.Catalog.API": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/home",
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  }
+}
