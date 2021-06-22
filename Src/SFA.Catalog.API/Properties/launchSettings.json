@@ -11,7 +11,10 @@
       "useSSL": true
     },
     "Azure Dev Spaces": {
-      "commandName": "AzureDevSpaces"
+      "commandName": "AzureDevSpaces",
+      "resourceGroup": "sfd-dev",
+      "aksName": "sfd-kuber",
+      "subscriptionId": "1e6b7231-4ee0-48a3-9b6a-0fce30682dd7"
     }
   }
 }

@@ -8,7 +8,7 @@ namespace SFA.Catalog.API.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return this.Content("Hello World");
+            return this.Content("Catalog API");
         }
     }
 }

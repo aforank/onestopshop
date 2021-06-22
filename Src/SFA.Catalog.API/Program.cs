@@ -6,9 +6,9 @@ using Microsoft.Extensions.Hosting;
 
 namespace SFA.Catalog.API
 {
-    class Program
+    public class Program
     {
-        static Task Main(string[] args)
+        public static Task Main(string[] args)
         {
             return CreateHostBuilder(args).Build().RunAsync();
         }
@@ -25,7 +25,8 @@ namespace SFA.Catalog.API
             {
                 configHost.SetBasePath(Directory.GetCurrentDirectory());
                 configHost.AddJsonFile("hostsettings.json", optional: true);
-                configHost.AddEnvironmentVariables(prefix: "PREFIX_");
+                configHost.AddJsonFile("appsettings.json", optional: true);
+                configHost.AddEnvironmentVariables(prefix: "SFA_");
                 configHost.AddCommandLine(args);
             });
     }

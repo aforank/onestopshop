@@ -5,4 +5,14 @@ services:
     image: ${DOCKER_REGISTRY-}sfacatalogapi
     build:
       context: .
-      dockerfile: SFA.Catalog.API\Dockerfile
+      dockerfile: SFA.Catalog.API/Dockerfile
+    depends_on:
+      - sql
+
+  sql:
+   image: mcr.microsoft.com/mssql/server:2019-latest
+   environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+   ports:
+      - "5433:1433"
